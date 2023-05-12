@@ -21,6 +21,13 @@ public class PlayerMovement : MonoBehaviour
     private bool _canJump = false;
     [SerializeField] private int _hasJumped = 0;
 
+
+    public float moveSpeed
+    {
+        get { return _moveSpeed; }
+        set { _moveSpeed = value; }
+    }
+
     private void Start()
     {
         RB = GetComponent<Rigidbody2D>();

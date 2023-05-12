@@ -6,6 +6,7 @@ public class SpeedPowerUp : PowerUp
 {
     public override void PowerUpAction(Collider2D playerCollision)
     {
-        // TODO: implementar
+        PlayerMovement playerMovement = playerCollision.GetComponent<PlayerMovement>();
+        playerMovement.moveSpeed *= 2;
     }
 }
