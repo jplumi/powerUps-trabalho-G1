@@ -15,6 +15,14 @@ public class PlayerDamage : MonoBehaviour
         GM = GameManager.instance;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            TakeDamage(1, Direction.LEFT);
+        }
+    }
+
     void TakeDamage(int dmgAmount, Direction direction)
     {
         GM.playerIsInvincible = true;
@@ -54,9 +62,14 @@ public class PlayerDamage : MonoBehaviour
     {
         KnockbackFlip();
         if (GM.playerHealth.currentHealth == 0)
-            Destroy(gameObject);
+            Die();
         GM.playerIsInvincible = false;
         GM.canControlPlayer = true;
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
     }
 
     private void KnockbackFlip()

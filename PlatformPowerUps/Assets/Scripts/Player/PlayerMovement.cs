@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private bool _canJump = false;
     [SerializeField] private int _hasJumped = 0;
 
+    private GameManager GM;
 
     public float moveSpeed
     {
@@ -32,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        GM = GameManager.instance;
     }
 
     private void Update()
@@ -51,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (GameManager.instance.canControlPlayer)
+        if (GM.canControlPlayer)
         {
             Movement();
         }

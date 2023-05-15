@@ -5,7 +5,7 @@ public class PlayerShoot : MonoBehaviour
 {
     [Header("Shot Properties")]
     [SerializeField] private GameObject _shot;
-    [SerializeField] private float _shotRateTime;
+    public float shotRateTime;
 
     [Header("Sound")]
     [SerializeField] private AudioClip _shotSFX;
@@ -49,7 +49,7 @@ public class PlayerShoot : MonoBehaviour
     IEnumerator ShotTime()
     {
         _canShoot = false;
-        yield return new WaitForSeconds(_shotRateTime);
+        yield return new WaitForSeconds(shotRateTime);
         _canShoot = true;
     }
 }
