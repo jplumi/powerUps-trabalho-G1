@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shot: {fileID: 1286018958784768247, guid: 8ccf26144f0c04f6d9eccca080370471, type: 3}
-  _shotRateTime: 0.6
+  shotRateTime: 0.7
   _shotSFX: {fileID: 8300000, guid: 2b0095ee6738e4f16a89014ff7186564, type: 3}
   _shotVolume: 0.3
 --- !u!1 &6606489115241751107

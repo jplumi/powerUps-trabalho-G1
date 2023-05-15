@@ -5,6 +5,7 @@ public class PlayerShoot : MonoBehaviour
 {
     [Header("Shot Properties")]
     [SerializeField] private GameObject _shot;
+    [SerializeField] private float doubleShotRate;
     public float shotRateTime;
 
     [Header("Sound")]
@@ -16,6 +17,8 @@ public class PlayerShoot : MonoBehaviour
     private Animator _animator;
 
     private bool _canShoot = true;
+
+    public bool doubleShot = false;
 
     private AudioSource _audio;
 
@@ -40,9 +43,14 @@ public class PlayerShoot : MonoBehaviour
         if (_canShoot)
         {
             StartCoroutine("ShotTime");
+
             _animator.SetTrigger("shoot");
+
             Instantiate(_shot, _shotSpawnPoint.position, _shotSpawnPoint.rotation);
             _audio.PlayOneShot(_shotSFX, _shotVolume);
+
+            if (doubleShot)
+                StartCoroutine("SecondShot");
         }
     }
 
@@ -51,5 +59,12 @@ public class PlayerShoot : MonoBehaviour
         _canShoot = false;
         yield return new WaitForSeconds(shotRateTime);
         _canShoot = true;
+    }
+
+    IEnumerator SecondShot()
+    {
+        yield return new WaitForSeconds(doubleShotRate);
+        Instantiate(_shot, _shotSpawnPoint.position, _shotSpawnPoint.rotation);
+        _audio.PlayOneShot(_shotSFX, _shotVolume);
     }
 }

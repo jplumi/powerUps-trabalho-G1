@@ -6,6 +6,7 @@ public class DoubleShotPowerUp : PowerUp
 {
     public override void PowerUpAction(Collider2D playerCollision)
     {
-        // TODO: implementar
+        PlayerShoot playerShoot = playerCollision.GetComponent<PlayerShoot>();
+        playerShoot.doubleShot = true;
     }
 }
