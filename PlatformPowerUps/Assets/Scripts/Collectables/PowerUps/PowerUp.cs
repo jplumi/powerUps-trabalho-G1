@@ -17,13 +17,15 @@ public abstract class PowerUp : MonoBehaviour
 
     public abstract void PowerUpAction(Collider2D playerCollision);
 
+    public abstract void RemovePowerUp();
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             _audioSource.PlayOneShot(_collectedSound, _soundVolume);
+            GetComponent<SpriteRenderer>().enabled = false;
             PowerUpAction(collision);
-            Destroy(gameObject);
         }
     }
 }
