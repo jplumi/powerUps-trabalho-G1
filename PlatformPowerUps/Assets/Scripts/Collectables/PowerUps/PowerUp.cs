@@ -10,22 +10,31 @@ public abstract class PowerUp : MonoBehaviour
 
     private AudioSource _audioSource;
 
+    [SerializeField] private float _powerUpTime = 5f;
+
     void Start()
     {
         _audioSource = GameManager.instance.GetComponent<AudioSource>();
     }
 
-    public abstract void PowerUpAction(Collider2D playerCollision);
+    public abstract void AddPowerUp(Collider2D playerCollision);
 
     public abstract void RemovePowerUp();
+
+    private void EndPowerUpTime()
+    {
+        RemovePowerUp();
+        Destroy(gameObject);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             _audioSource.PlayOneShot(_collectedSound, _soundVolume);
-            GetComponent<SpriteRenderer>().enabled = false;
-            PowerUpAction(collision);
+            gameObject.SetActive(false);
+            AddPowerUp(collision);
+            Invoke("EndPowerUpTime", _powerUpTime);
         }
     }
 }

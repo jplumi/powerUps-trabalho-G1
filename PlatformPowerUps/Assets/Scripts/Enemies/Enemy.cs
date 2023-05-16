@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _speed = 0f;
     [SerializeField] private LayerMask _groundLayer;
     [SerializeField] private int _health = 0;
+    [SerializeField] private GameObject _dropableItem;
 
     public int damage = 0;
 
@@ -83,9 +84,24 @@ public class Enemy : MonoBehaviour
         _enemyHealth.TakeDamage(amount);
         if(_enemyHealth.currentHealth == 0)
         {
-            Destroy(gameObject);
+            Die();
         }
         Debug.Log("Enemy Health: " + _enemyHealth.currentHealth);
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+        DropItem();
+
+    }
+
+    private void DropItem()
+    {
+        if(_dropableItem != null)
+        {
+            Instantiate(_dropableItem, transform.position, Quaternion.identity);
+        }
     }
 
     void OnDrawGizmos()
