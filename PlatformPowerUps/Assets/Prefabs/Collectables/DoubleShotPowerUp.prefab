@@ -147,3 +147,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _collectedSound: {fileID: 8300000, guid: fd9df24e25b7343ffb0a2eb082700f3f, type: 3}
   _soundVolume: 1
+  powerUpTime: 10

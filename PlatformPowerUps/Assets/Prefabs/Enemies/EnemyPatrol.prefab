@@ -142,6 +142,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   _health: 50
+  _dropableItem: {fileID: 0}
   damage: 10
 --- !u!95 &2270003527129217849
 Animator:

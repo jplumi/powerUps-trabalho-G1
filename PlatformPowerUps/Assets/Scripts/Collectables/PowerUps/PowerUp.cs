@@ -10,7 +10,7 @@ public abstract class PowerUp : MonoBehaviour
 
     private AudioSource _audioSource;
 
-    [SerializeField] private float _powerUpTime = 5f;
+    [SerializeField] public float powerUpTime = 5f;
 
     void Start()
     {
@@ -34,7 +34,7 @@ public abstract class PowerUp : MonoBehaviour
             _audioSource.PlayOneShot(_collectedSound, _soundVolume);
             gameObject.SetActive(false);
             AddPowerUp(collision);
-            Invoke("EndPowerUpTime", _powerUpTime);
+            Invoke("EndPowerUpTime", powerUpTime);
         }
     }
 }

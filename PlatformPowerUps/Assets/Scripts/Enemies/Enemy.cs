@@ -3,7 +3,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    [SerializeField] private float _speed = 0f;
+    [SerializeField] public float speed = 0f;
     [SerializeField] private LayerMask _groundLayer;
     [SerializeField] private int _health = 0;
     [SerializeField] private GameObject _dropableItem;
@@ -35,9 +35,9 @@ public class Enemy : MonoBehaviour
     void Move()
     {
         if (_direction.Equals(Direction.RIGHT))
-            RB.velocity = new Vector2(_speed, RB.velocity.y);
+            RB.velocity = new Vector2(speed, RB.velocity.y);
         else
-            RB.velocity = new Vector2(-_speed, RB.velocity.y);
+            RB.velocity = new Vector2(speed, RB.velocity.y);
     }
 
     void Flip()
@@ -100,6 +100,11 @@ public class Enemy : MonoBehaviour
     {
         if(_dropableItem != null)
         {
+            DoubleJumpPowerUp doubleJumpPowerUp;
+            if(_dropableItem.TryGetComponent(out doubleJumpPowerUp))
+            {
+                doubleJumpPowerUp.powerUpTime = 2000f;
+            }
             Instantiate(_dropableItem, transform.position, Quaternion.identity);
         }
     }
