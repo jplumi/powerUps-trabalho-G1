@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour
         if (_direction.Equals(Direction.RIGHT))
             RB.velocity = new Vector2(speed, RB.velocity.y);
         else
-            RB.velocity = new Vector2(speed, RB.velocity.y);
+            RB.velocity = new Vector2(-speed, RB.velocity.y);
     }
 
     void Flip()
