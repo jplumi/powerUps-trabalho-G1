@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Jump")]
     [SerializeField] private float _jumpForce = 0f;
     [SerializeField] private LayerMask _groundLayer;
+    [SerializeField] private float _groundCheckRadius;
+    [SerializeField] private int _hasJumped = 0;
+    [SerializeField] private Transform _groundCheck;
 
     public int maxJumps { get; set; } = 1;
 
@@ -16,10 +19,8 @@ public class PlayerMovement : MonoBehaviour
 
     private float _horizontalMove = 0f;
 
-    private float _groundCheckLength = 0.1f;
     private bool _isGrounded = false;
     private bool _canJump = false;
-    [SerializeField] private int _hasJumped = 0;
 
     private GameManager GM;
 
@@ -32,8 +33,8 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         RB = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>();
         GM = GameManager.instance;
+        _animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -73,13 +74,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckIfGrounded()
     {
-        Vector2 raycastOrigin = (Vector2) transform.position + Vector2.down * 0.9f;
-        _isGrounded = Physics2D.Raycast(raycastOrigin, Vector2.down, _groundCheckLength, _groundLayer);
+        _isGrounded = Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _groundLayer);
 
         if (_isGrounded)
             _hasJumped = 0;
-
-        Debug.DrawRay(raycastOrigin, Vector2.down * _groundCheckLength, Color.red);
     }
 
     private void Animate()
@@ -99,5 +97,10 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.eulerAngles = new Vector2(0, 0);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(_groundCheck.position, _groundCheckRadius);
     }
 }
