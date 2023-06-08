@@ -7,17 +7,12 @@ public abstract class AttackState
     // time since state entry
     protected float fixedTime = 0f;
 
-    // 
-    float attackTimer = 0;
-
     protected bool shouldCombo;
 
     public abstract void EnterState(AttackStateManager stateManager);
 
     public virtual void UpdateState(AttackStateManager stateManager)
     {
-        //attackTimer -= Time.deltaTime;
-
         if (Input.GetKeyDown(KeyCode.J))
         {
             shouldCombo = true;

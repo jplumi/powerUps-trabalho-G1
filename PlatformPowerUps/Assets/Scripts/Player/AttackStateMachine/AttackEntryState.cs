@@ -7,7 +7,8 @@ public class AttackEntryState : AttackState
     public override void EnterState(AttackStateManager stateManager)
     {
         Debug.Log("ENTER ENTRY");
-        attackDuration = 0.4f;
+        GameManager.instance.canControlPlayer = false;
+        attackDuration = 0.55f;
         stateManager.animator.SetTrigger("attack1");
     }
 
