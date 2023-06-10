@@ -7,6 +7,7 @@ public abstract class AttackState
     // time since state entry
     protected float fixedTime = 0f;
 
+    // check whether the next attack in the sequence should be played or not
     protected bool shouldCombo;
 
     public abstract void EnterState(AttackStateManager stateManager);

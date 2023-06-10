@@ -6,8 +6,10 @@ public class AttackComboState : AttackState
 {
     public override void EnterState(AttackStateManager stateManager)
     {
-        Debug.Log("ENTER COMBO");
+        //Debug.Log("ENTER COMBO");
         attackDuration = 0.55f;
+
+        stateManager.damageAmount = 30;
         stateManager.animator.SetTrigger("attack2");
     }
 

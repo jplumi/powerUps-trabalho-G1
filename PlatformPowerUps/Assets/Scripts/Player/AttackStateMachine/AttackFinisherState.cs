@@ -6,8 +6,10 @@ public class AttackFinisherState : AttackState
 {
     public override void EnterState(AttackStateManager stateManager)
     {
-        Debug.Log("ENTER FINISHER");
+        //Debug.Log("ENTER FINISHER");
         attackDuration = 0.75f;
+
+        stateManager.damageAmount = 40;
         stateManager.animator.SetTrigger("attack3");
     }
 

@@ -6,7 +6,7 @@ public class IdleState : AttackState
 {
     public override void EnterState(AttackStateManager stateManager)
     {
-        Debug.Log("ENTER IDLE");
+        //Debug.Log("ENTER IDLE");
         GameManager.instance.canControlPlayer = true;
     }
 
