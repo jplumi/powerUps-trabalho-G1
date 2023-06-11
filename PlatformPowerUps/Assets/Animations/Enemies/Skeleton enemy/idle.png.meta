@@ -1,0 +1,268 @@
+fileFormatVersion: 2
+guid: 62676be57873b37408009038c5d81bf8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 1
+  spritePivot: {x: 0, y: 1}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Skeleton enemy 1_42
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 79
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1e5c013490b0845b2cad1e4c6ffaca
+      internalID: 1368712249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton enemy 1_43
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 79
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ef606d42285f345939b543bebd7d7f
+      internalID: -1337282046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton enemy 1_44
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 79
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66db2065008230c43bf8a83f219c837a
+      internalID: 1230372147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton enemy 1_45
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 79
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99331133760f954d9b68e8cc8c43613
+      internalID: -526277776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Skeleton enemy 1_0: -102486408
+      Skeleton enemy 1_1: 658677305
+      Skeleton enemy 1_10: -1816432574
+      Skeleton enemy 1_11: 489847683
+      Skeleton enemy 1_12: -903741223
+      Skeleton enemy 1_13: -1240472615
+      Skeleton enemy 1_14: 236418662
+      Skeleton enemy 1_15: -61302042
+      Skeleton enemy 1_16: -1797988772
+      Skeleton enemy 1_17: -1421369979
+      Skeleton enemy 1_18: 818863125
+      Skeleton enemy 1_19: 116993013
+      Skeleton enemy 1_2: -258535467
+      Skeleton enemy 1_20: 1844925181
+      Skeleton enemy 1_21: -1564550210
+      Skeleton enemy 1_22: -735608212
+      Skeleton enemy 1_23: 1495537881
+      Skeleton enemy 1_24: -1243195098
+      Skeleton enemy 1_25: 1494190823
+      Skeleton enemy 1_26: -1956473889
+      Skeleton enemy 1_27: -256235230
+      Skeleton enemy 1_28: -2013313879
+      Skeleton enemy 1_29: 2120756308
+      Skeleton enemy 1_3: -1759588948
+      Skeleton enemy 1_30: 1477588593
+      Skeleton enemy 1_31: -1952562572
+      Skeleton enemy 1_32: 1232581757
+      Skeleton enemy 1_33: -2056188505
+      Skeleton enemy 1_34: -979515034
+      Skeleton enemy 1_35: -463437979
+      Skeleton enemy 1_36: 1358128558
+      Skeleton enemy 1_37: 570861537
+      Skeleton enemy 1_38: 1056584857
+      Skeleton enemy 1_39: -1364078860
+      Skeleton enemy 1_4: -1249518595
+      Skeleton enemy 1_40: -1381678264
+      Skeleton enemy 1_41: -1679735541
+      Skeleton enemy 1_42: 1368712249
+      Skeleton enemy 1_43: -1337282046
+      Skeleton enemy 1_44: 1230372147
+      Skeleton enemy 1_45: -526277776
+      Skeleton enemy 1_46: 1584763641
+      Skeleton enemy 1_47: -1711381088
+      Skeleton enemy 1_48: 268478366
+      Skeleton enemy 1_5: -812783261
+      Skeleton enemy 1_6: 1311417998
+      Skeleton enemy 1_7: -1984942204
+      Skeleton enemy 1_8: 85860895
+      Skeleton enemy 1_9: -1035246586
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
