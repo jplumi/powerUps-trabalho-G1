@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &54625510
 Transform:
   m_ObjectHideFlags: 0
@@ -103,9 +103,7 @@ GameObject:
   - component: {fileID: 3054417584024782218}
   - component: {fileID: 6606489113857016473}
   - component: {fileID: 3737313042300849868}
-  - component: {fileID: 6606489113857017191}
-  - component: {fileID: 6606489113857017187}
-  - component: {fileID: 297549191}
+  - component: {fileID: 6167100565196847571}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -336,7 +334,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6606489113857017191
+--- !u!114 &6167100565196847571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -345,42 +343,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 6606489113857016474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3c96e54b8597478fb0a733aa6c9c18d, type: 3}
+  m_Script: {fileID: 11500000, guid: d3fcb75d5b5f24e94a7afc3f39b476c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 8
-  _jumpForce: 28
+  _groundCheck: {fileID: 1976793418}
+  _groundCheckRadius: 0.3
   _groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  _groundCheckRadius: 0.3
-  _hasJumped: 0
-  _groundCheck: {fileID: 1976793418}
---- !u!114 &6606489113857017187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6606489113857016474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2d4bd2e156e2449e864b7706ed2c271, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _knockbackForce: 8
---- !u!114 &297549191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6606489113857016474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d9d885860a4d46598329fbff42e017b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  moveSpeed: 28
+  horizontalMove: 0
+  isGrounded: 0
+  attackDamageAmount: 0
 --- !u!1 &6606489115241751107
 GameObject:
   m_ObjectHideFlags: 0

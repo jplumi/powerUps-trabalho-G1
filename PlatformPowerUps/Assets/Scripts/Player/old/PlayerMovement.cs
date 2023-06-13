@@ -101,6 +101,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(_groundCheck.position, _groundCheckRadius);
+        //Gizmos.DrawWireSphere(_groundCheck.position, _groundCheckRadius);
     }
 }

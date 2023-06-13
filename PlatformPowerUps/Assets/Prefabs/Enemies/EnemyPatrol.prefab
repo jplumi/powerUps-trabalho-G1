@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 398175967817813533}
   - component: {fileID: 398175967817813538}
+  - component: {fileID: 2270003527129217849}
   - component: {fileID: 398175967817813536}
   - component: {fileID: 6584897093692219244}
   - component: {fileID: 398175967817813532}
-  - component: {fileID: 2270003527129217849}
+  - component: {fileID: 1069698570}
   m_Layer: 9
   m_Name: EnemyPatrol
   m_TagString: Enemy
@@ -88,6 +89,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2270003527129217849
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398175967817813537}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 53fd1e08abe754f03a54d13159431830, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &398175967817813536
 Rigidbody2D:
   serializedVersion: 4
@@ -144,23 +165,17 @@ MonoBehaviour:
   _health: 50
   _dropableItem: {fileID: 0}
   damage: 10
---- !u!95 &2270003527129217849
-Animator:
-  serializedVersion: 4
+--- !u!114 &1069698570
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398175967817813537}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 53fd1e08abe754f03a54d13159431830, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c80bd324ba934dea826192c5ec9aba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHealth: 100
+  _maxHealth: 100
