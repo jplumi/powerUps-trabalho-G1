@@ -24,6 +24,7 @@ public class PlayerJumpingState : PlayerState
         base.UpdateState();
 
         CheckAttackCombo();
+        CheckGunShoot();
 
         stateManager.animator.SetFloat("verticalMove", stateManager.RB.velocity.y);
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerStateManager : MonoBehaviour
 {
+    [Header("Jump Values")]
     [SerializeField] private Transform _groundCheck;
     [SerializeField] private float _groundCheckRadius;
     [SerializeField] private LayerMask _groundLayer;
@@ -12,14 +13,18 @@ public class PlayerStateManager : MonoBehaviour
     PlayerState _currentState;
     PlayerStateInstances stateInstances;
 
-    public Rigidbody2D RB { get; private set; }
-    public Animator animator { get; private set; }
+    [HideInInspector] public Rigidbody2D RB { get; private set; }
+    [HideInInspector] public Animator animator { get; private set; }
 
     [HideInInspector] public float horizontalMove = 0f;
     [HideInInspector] public bool isGrounded = false;
 
     Collider2D swordCollider;
     [HideInInspector] public int attackDamageAmount = 0;
+
+    [Header("Shot")]
+    public GameObject shotPrefab;
+    public Transform shotSpawnPoint;
 
     // unity lifecycle
     void Start()

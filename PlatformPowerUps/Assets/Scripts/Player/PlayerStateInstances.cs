@@ -11,6 +11,9 @@ public class PlayerStateInstances
     public PlayerAttack1State Attack1 { get; private set; }
     public PlayerAttack2State Attack2 { get; private set; }
     public PlayerAttack3State Attack3 { get; private set; }
+    public PlayerGunOutState GunOut { get; private set; }
+    public PlayerShootState Shoot { get; private set; }
+    public PlayerGunInState GunIn { get; private set; }
 
     public PlayerStateInstances(PlayerStateManager stateManager)
     {
@@ -21,5 +24,8 @@ public class PlayerStateInstances
         Attack1 = new PlayerAttack1State(stateManager, this);
         Attack2 = new PlayerAttack2State(stateManager, this);
         Attack3 = new PlayerAttack3State(stateManager, this);
+        GunOut = new PlayerGunOutState(stateManager, this);
+        Shoot = new PlayerShootState(stateManager, this);
+        GunIn = new PlayerGunInState(stateManager, this);
     }
 }

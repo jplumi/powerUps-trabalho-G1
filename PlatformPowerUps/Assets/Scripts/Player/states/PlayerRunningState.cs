@@ -22,6 +22,7 @@ public class PlayerRunningState : PlayerState
         // we should jump while running too
         CheckJump();
         CheckAttackCombo();
+        CheckGunShoot();
 
         if(stateManager.RB.velocity.x == 0)
         {

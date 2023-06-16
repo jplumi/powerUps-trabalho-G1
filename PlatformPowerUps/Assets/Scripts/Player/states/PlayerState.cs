@@ -7,6 +7,8 @@ public abstract class PlayerState : State
     protected PlayerStateManager stateManager;
     protected PlayerStateInstances states;
 
+    protected float stateDuration;
+
     public PlayerState(PlayerStateManager playerStateManager, PlayerStateInstances states)
     {
         stateManager = playerStateManager;
@@ -27,6 +29,14 @@ public abstract class PlayerState : State
         if (Input.GetKeyDown(KeyCode.J))
         {
             stateManager.SetNextState(states.Attack1);
+        }
+    }
+
+    protected void CheckGunShoot()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            stateManager.SetNextState(states.GunOut);
         }
     }
 }

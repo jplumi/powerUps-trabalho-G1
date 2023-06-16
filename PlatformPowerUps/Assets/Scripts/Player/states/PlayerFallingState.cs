@@ -20,6 +20,9 @@ public class PlayerFallingState : PlayerState
     {
         base.UpdateState();
 
+        CheckAttackCombo();
+        CheckGunShoot();
+
         stateManager.animator.SetFloat("verticalMove", stateManager.RB.velocity.y);
 
         if (stateManager.isGrounded)

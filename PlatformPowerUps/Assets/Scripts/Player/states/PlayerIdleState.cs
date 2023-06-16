@@ -21,6 +21,7 @@ public class PlayerIdleState : PlayerState
 
         CheckJump();
         CheckAttackCombo();
+        CheckGunShoot();
 
         if(stateManager.isGrounded && stateManager.RB.velocity.x != 0)
         {
