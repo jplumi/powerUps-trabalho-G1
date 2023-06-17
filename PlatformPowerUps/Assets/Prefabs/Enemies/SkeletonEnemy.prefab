@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9116747476284397951}
   - component: {fileID: 9116747476284397947}
   - component: {fileID: 9116747476284397944}
+  - component: {fileID: 8001157438225497793}
   m_Layer: 0
   m_Name: SkeletonEnemy
   m_TagString: Untagged
@@ -122,7 +123,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -144,3 +145,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0.019926602, y: 0.028906034}
   m_Size: {x: 0.16806649, y: 0.32218796}
   m_Direction: 0
+--- !u!114 &8001157438225497793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9116747476284397948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6eb02436fbe4479a558d4ca2b82f59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  movementSpeed: 5
+  RB: {fileID: 0}
+  animator: {fileID: 0}
