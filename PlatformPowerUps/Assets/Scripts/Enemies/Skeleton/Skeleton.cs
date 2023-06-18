@@ -6,6 +6,7 @@ public class Skeleton : MonoBehaviour
 {
     [Header("Movement")]
     public LayerMask groundLayer;
+    public LayerMask playerLayer;
     public float movementSpeed;
 
     [HideInInspector] public Rigidbody2D RB;

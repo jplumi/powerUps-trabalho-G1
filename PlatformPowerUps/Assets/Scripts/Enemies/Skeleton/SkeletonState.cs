@@ -9,7 +9,9 @@ public class SkeletonState : State
 
     protected bool wallHit = false;
     protected bool stepHit = false;
+    protected bool playerAlertRange = false;
 
+    // direction the enemy is facing
     protected Vector2 direction = Vector2.right;
 
     public SkeletonState(Skeleton manager, SkeletonStateInstances states)
@@ -21,6 +23,8 @@ public class SkeletonState : State
     public override void EnterState()
     {
         base.EnterState();
+
+        Debug.Log("ENTER " + this.GetType());
     }
 
     public override void UpdateState()
@@ -29,6 +33,7 @@ public class SkeletonState : State
 
         CheckStep();
         CheckWall();
+        CheckPlayer();
     }
 
     public override void FixedUpdateState()
@@ -64,8 +69,22 @@ public class SkeletonState : State
         Debug.DrawRay(raycastOrigin, Vector2.down * raycastDistance, Color.red);
     }
 
+    void CheckPlayer()
+    {
+        Vector2 origin = stateManager.gameObject.transform.position;
+        float raycastDistance = 6f;
+        playerAlertRange = Physics2D.Raycast(
+            origin,
+            direction,
+            raycastDistance,
+            stateManager.playerLayer);
+
+        Debug.DrawRay(origin, direction * raycastDistance, Color.green);
+    }
+
     protected void Flip()
     {
+        Debug.Log("Flip");
         if (direction.Equals(Vector2.right))
         {
             stateManager.transform.eulerAngles = new Vector2(0, 180);

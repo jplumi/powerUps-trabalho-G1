@@ -160,6 +160,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  movementSpeed: 5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  movementSpeed: 3
   RB: {fileID: 0}
   animator: {fileID: 0}

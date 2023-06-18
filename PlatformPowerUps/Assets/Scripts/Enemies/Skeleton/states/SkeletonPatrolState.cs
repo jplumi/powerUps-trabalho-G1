@@ -18,6 +18,10 @@ public class SkeletonPatrolState : SkeletonState
     {
         base.UpdateState();
 
+        if (playerAlertRange)
+        {
+            stateManager.SetNextState(states.Alert);
+        }
     }
 
     public override void FixedUpdateState()
