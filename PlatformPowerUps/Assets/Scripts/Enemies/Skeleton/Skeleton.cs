@@ -9,6 +9,11 @@ public class Skeleton : MonoBehaviour
     public LayerMask playerLayer;
     public float movementSpeed;
 
+    [Header("Attack")]
+    [SerializeField] int attackDamageAmount;
+
+    Collider2D attackCollider;
+
     [HideInInspector] public Rigidbody2D RB;
     [HideInInspector] public Animator animator;
 
@@ -20,6 +25,8 @@ public class Skeleton : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        attackCollider = gameObject.transform.Find("AttackCollider")
+            .GetComponent<Collider2D>();
 
         instances = new SkeletonStateInstances(this);
 
@@ -42,5 +49,23 @@ public class Skeleton : MonoBehaviour
         currentState.ExitState();
         currentState = state;
         currentState.EnterState();
+    }
+
+    // called by attack animation events
+    public void Attack()
+    {
+        Collider2D[] result = new Collider2D[1];
+
+        ContactFilter2D attackFilter = new ContactFilter2D();
+        attackFilter.SetLayerMask(playerLayer);
+
+        attackCollider.OverlapCollider(attackFilter, result);
+
+        Debug.Log(result[0]);
+
+        if (result[0] != null && result[0].TryGetComponent<Damageable>(out Damageable damageable))
+        {
+            damageable.TakeDamage(attackDamageAmount, attackCollider);
+        }
     }
 }

@@ -18,7 +18,7 @@ public class SkeletonPatrolState : SkeletonState
     {
         base.UpdateState();
 
-        if (playerAlertRange)
+        if (playerDetected)
         {
             stateManager.SetNextState(states.Alert);
         }

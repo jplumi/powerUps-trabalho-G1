@@ -9,7 +9,7 @@ public class SkeletonState : State
 
     protected bool wallHit = false;
     protected bool stepHit = false;
-    protected bool playerAlertRange = false;
+    protected bool playerDetected = false;
 
     // direction the enemy is facing
     protected Vector2 direction = Vector2.right;
@@ -24,7 +24,7 @@ public class SkeletonState : State
     {
         base.EnterState();
 
-        Debug.Log("ENTER " + this.GetType());
+        //Debug.Log("ENTER " + this.GetType());
     }
 
     public override void UpdateState()
@@ -73,7 +73,7 @@ public class SkeletonState : State
     {
         Vector2 origin = stateManager.gameObject.transform.position;
         float raycastDistance = 6f;
-        playerAlertRange = Physics2D.Raycast(
+        playerDetected = Physics2D.Raycast(
             origin,
             direction,
             raycastDistance,
