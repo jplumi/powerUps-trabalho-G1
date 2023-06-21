@@ -44,13 +44,13 @@ public class PlayerStateManager : MonoBehaviour
     {
         _currentState.UpdateState();
         CheckIfGrounded();
-        Flip();
         horizontalMove = Input.GetAxisRaw("Horizontal");
     }
 
     private void FixedUpdate()
     {
         _currentState.FixedUpdateState();
+        Flip();
 
         // the horizontal movement is executed in every state
         HorizontalMovement();
