@@ -61,8 +61,6 @@ public class Skeleton : MonoBehaviour
 
         attackCollider.OverlapCollider(attackFilter, result);
 
-        Debug.Log(result[0]);
-
         if (result[0] != null && result[0].TryGetComponent<Damageable>(out Damageable damageable))
         {
             damageable.TakeDamage(attackDamageAmount, attackCollider);

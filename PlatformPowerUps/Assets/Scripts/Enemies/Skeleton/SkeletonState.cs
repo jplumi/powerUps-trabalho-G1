@@ -84,7 +84,6 @@ public class SkeletonState : State
 
     protected void Flip()
     {
-        Debug.Log("Flip");
         if (direction.Equals(Vector2.right))
         {
             stateManager.transform.eulerAngles = new Vector2(0, 180);

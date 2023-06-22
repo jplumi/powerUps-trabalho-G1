@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,11 +9,23 @@ public class GameManager : MonoBehaviour
 
     public bool playerIsInvincible = false;
 
-    public Health playerHealth = new Health(100, 100);
+    public float invincibilityTime;
 
     void Awake()
     {
         if (instance == null)
             instance = this;
+    }
+
+    public void MakePlayerInvincible()
+    {
+        playerIsInvincible = true;
+        StartCoroutine("MakeVincible");
+    }
+
+    IEnumerator MakeVincible()
+    {
+        yield return new WaitForSeconds(invincibilityTime);
+        playerIsInvincible = false;
     }
 }

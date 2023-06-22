@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 678540318}
   - component: {fileID: 678540319}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AttackCollider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +41,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 678540317}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e773803e284bc49dbaa02996ac678e47, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -72,9 +72,9 @@ GameObject:
   - component: {fileID: 9116747476284397947}
   - component: {fileID: 9116747476284397944}
   - component: {fileID: 8001157438225497793}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SkeletonEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -223,6 +223,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   movementSpeed: 3
-  attackDamageAmount: 0
+  attackDamageAmount: 20
   RB: {fileID: 0}
   animator: {fileID: 0}

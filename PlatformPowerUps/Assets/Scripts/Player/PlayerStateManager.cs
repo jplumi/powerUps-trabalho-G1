@@ -11,7 +11,7 @@ public class PlayerStateManager : MonoBehaviour
     public float moveSpeed = 0f;
 
     PlayerState _currentState;
-    PlayerStateInstances stateInstances;
+    public PlayerStateInstances stateInstances { get; private set; }
 
     [HideInInspector] public Rigidbody2D RB { get; private set; }
     [HideInInspector] public Animator animator { get; private set; }
@@ -79,11 +79,11 @@ public class PlayerStateManager : MonoBehaviour
 
     private void Flip()
     {
-        if (RB.velocity.x < 0)
+        if (horizontalMove < 0)
         {
             transform.eulerAngles = new Vector2(0, 180);
         }
-        else if (RB.velocity.x > 0)
+        else if (horizontalMove > 0)
         {
             transform.eulerAngles = new Vector2(0, 0);
         }

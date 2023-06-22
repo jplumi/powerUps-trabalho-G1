@@ -27,7 +27,7 @@ public class PlayerDamage : MonoBehaviour
     {
         GM.playerIsInvincible = true;
         GM.canControlPlayer = false;
-        GM.playerHealth.TakeDamage(dmgAmount);
+        //GM.playerHealth.TakeDamage(dmgAmount);
 
         _animator.SetTrigger("damage");
 
@@ -37,7 +37,7 @@ public class PlayerDamage : MonoBehaviour
         else
             RB.AddForce(new Vector2(-1, 1) * _knockbackForce, ForceMode2D.Impulse);
 
-        Debug.Log("Player Health: " + GM.playerHealth.currentHealth);
+        //Debug.Log("Player Health: " + GM.playerHealth.currentHealth);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -61,8 +61,8 @@ public class PlayerDamage : MonoBehaviour
     public void OnPlayerDamageAnimationEnd()
     {
         KnockbackFlip();
-        if (GM.playerHealth.currentHealth == 0)
-            Die();
+        //if (GM.playerHealth.currentHealth == 0)
+        //    Die();
         GM.playerIsInvincible = false;
         GM.canControlPlayer = true;
     }
