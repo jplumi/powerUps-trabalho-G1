@@ -12,6 +12,7 @@ public class PlayerRunningState : PlayerState
     public override void EnterState()
     {
         base.EnterState();
+        stateManager.movement_sfx.Play();
         stateManager.animator.Play("Running");
     }
 
@@ -26,6 +27,7 @@ public class PlayerRunningState : PlayerState
 
         if(stateManager.RB.velocity.x == 0)
         {
+            stateManager.movement_sfx.Stop();
             stateManager.SetNextState(states.Idle);
         }
     }

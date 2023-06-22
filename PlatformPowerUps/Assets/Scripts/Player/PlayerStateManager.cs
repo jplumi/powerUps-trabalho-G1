@@ -16,6 +16,15 @@ public class PlayerStateManager : MonoBehaviour
     [HideInInspector] public Rigidbody2D RB { get; private set; }
     [HideInInspector] public Animator animator { get; private set; }
 
+    [Header("Sounds")]
+    [SerializeField] public AudioSource atack1_sfx;
+    [SerializeField] public AudioSource atack2_sfx;
+    [SerializeField] public AudioSource shot_sfx;
+    [SerializeField] public AudioSource movement_sfx;
+    [SerializeField] public AudioSource jump_sfx;
+    [SerializeField] public AudioSource landing_sfx;
+
+
     [HideInInspector] public float horizontalMove = 0f;
     [HideInInspector] public bool isGrounded = false;
 

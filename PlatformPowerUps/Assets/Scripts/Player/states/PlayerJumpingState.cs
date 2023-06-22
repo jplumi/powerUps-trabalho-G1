@@ -15,6 +15,8 @@ public class PlayerJumpingState : PlayerState
     public override void EnterState()
     {
         base.EnterState();
+
+        stateManager.jump_sfx.Play();
         stateManager.animator.Play("Jump/Fall");
         stateManager.RB.velocity = new Vector2(stateManager.RB.velocity.x, jumpForce);
     }
