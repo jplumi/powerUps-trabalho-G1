@@ -352,10 +352,13 @@ MonoBehaviour:
   _groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  _enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
   moveSpeed: 10
   horizontalMove: 0
   isGrounded: 0
-  attackDamageAmount: 0
+  attackDamageAmount: 20
   shotPrefab: {fileID: 1286018958784768247, guid: 8ccf26144f0c04f6d9eccca080370471, type: 3}
   shotSpawnPoint: {fileID: 6606489115241751106}
 --- !u!114 &8616089776250348407

@@ -8,7 +8,7 @@ public class SkeletonAlertState : SkeletonState
 
     bool attackRange = false;
 
-    float alertStateDuration = 10f;
+    float alertStateDuration = 5f;
 
     public SkeletonAlertState(Skeleton manager, SkeletonStateInstances states)
          : base(manager, states) { }
@@ -21,7 +21,7 @@ public class SkeletonAlertState : SkeletonState
 
         stateManager.movementSpeed *= 1.5f;
 
-        player = GameObject.Find("Player").transform;
+        player = GameObject.Find("Player")?.transform;
     }
 
     public override void UpdateState()

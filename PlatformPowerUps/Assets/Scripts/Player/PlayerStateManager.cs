@@ -8,6 +8,7 @@ public class PlayerStateManager : MonoBehaviour
     [SerializeField] private Transform _groundCheck;
     [SerializeField] private float _groundCheckRadius;
     [SerializeField] private LayerMask _groundLayer;
+    [SerializeField] private LayerMask _enemyLayer;
     public float moveSpeed = 0f;
 
     PlayerState _currentState;
@@ -20,6 +21,8 @@ public class PlayerStateManager : MonoBehaviour
     [HideInInspector] public bool isGrounded = false;
 
     Collider2D swordCollider;
+
+    // this is changed on the attack states
     [HideInInspector] public int attackDamageAmount = 0;
 
     [Header("Shot")]
@@ -93,7 +96,11 @@ public class PlayerStateManager : MonoBehaviour
     public void Attack()
     {
         Collider2D[] result = new Collider2D[5];
-        swordCollider.OverlapCollider(new ContactFilter2D(), result);
+
+        ContactFilter2D attackFilter = new ContactFilter2D();
+        attackFilter.SetLayerMask(_enemyLayer);
+
+        swordCollider.OverlapCollider(attackFilter, result);
         for (int i = 0; i < result.Length; i++)
         {
             if (result[i] != null && result[i].TryGetComponent<Damageable>(out Damageable damageable))

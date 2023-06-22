@@ -18,7 +18,7 @@ public class Skeleton : MonoBehaviour
     [HideInInspector] public Animator animator;
 
     SkeletonState currentState;
-    SkeletonStateInstances instances;
+    public SkeletonStateInstances instances { get; private set; }
 
 
     void Start()

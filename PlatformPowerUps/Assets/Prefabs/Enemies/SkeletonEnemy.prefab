@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 9116747476284397947}
   - component: {fileID: 9116747476284397944}
   - component: {fileID: 8001157438225497793}
+  - component: {fileID: 6800812500622941286}
   m_Layer: 9
   m_Name: SkeletonEnemy
   m_TagString: Enemy
@@ -226,3 +227,18 @@ MonoBehaviour:
   attackDamageAmount: 20
   RB: {fileID: 0}
   animator: {fileID: 0}
+--- !u!114 &6800812500622941286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9116747476284397948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afa04dc3247a7494dbeb1499b27e5435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHealth: 100
+  _maxHealth: 100
+  knockbackForce: 5
