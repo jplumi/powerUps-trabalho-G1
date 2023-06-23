@@ -17,6 +17,7 @@ public class PlayerAttack2State : AttackState
 
         stateManager.attackDamageAmount = 30;
         stateManager.animator.Play("AttackSword_2");
+        stateManager.atack1_sfx.Play();
     }
 
     public override void UpdateState()

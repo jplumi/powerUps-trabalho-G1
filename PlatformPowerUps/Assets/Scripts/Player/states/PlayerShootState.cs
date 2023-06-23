@@ -11,6 +11,7 @@ public class PlayerShootState : PlayerState
     {
         stateDuration = 0.4f;
         stateManager.animator.Play("GunShoot");
+        stateManager.shot_sfx.Play();
         InstantiateShot();
     }
 
