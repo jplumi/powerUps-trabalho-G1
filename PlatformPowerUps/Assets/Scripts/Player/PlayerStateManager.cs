@@ -21,7 +21,6 @@ public class PlayerStateManager : MonoBehaviour
     [SerializeField] public AudioClip atack1_sfx;
     [SerializeField] public AudioClip atack2_sfx;
     [SerializeField] public AudioClip shot_sfx;
-    //[SerializeField] public AudioClip movement_sfx;
     [SerializeField] public AudioClip jump_sfx;
     [SerializeField] public AudioClip landing_sfx;
     public AudioSource audioSource { get; private set; }

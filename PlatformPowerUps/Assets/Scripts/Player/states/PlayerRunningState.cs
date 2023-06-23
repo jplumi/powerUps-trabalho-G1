@@ -12,6 +12,7 @@ public class PlayerRunningState : PlayerState
     public override void EnterState()
     {
         base.EnterState();
+
         stateManager.audioSource.Play();
         stateManager.animator.Play("Running");
     }
@@ -25,7 +26,7 @@ public class PlayerRunningState : PlayerState
         CheckAttackCombo();
         CheckGunShoot();
 
-        if(stateManager.RB.velocity.x == 0)
+        if(stateManager.horizontalMove == 0)
         {
             stateManager.audioSource.Stop();
             stateManager.SetNextState(states.Idle);

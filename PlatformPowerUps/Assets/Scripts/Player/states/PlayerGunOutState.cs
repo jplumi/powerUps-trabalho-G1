@@ -9,6 +9,8 @@ public class PlayerGunOutState : PlayerState
 
     public override void EnterState()
     {
+        base.EnterState();
+
         GameManager.instance.canControlPlayer = false;
         stateDuration = 0.3f;
         stateManager.animator.Play("GunOut");

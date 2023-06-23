@@ -11,6 +11,8 @@ public class PlayerIdleState : PlayerState
     // state methods
     public override void EnterState()
     {
+        base.EnterState();
+
         GameManager.instance.canControlPlayer = true;
         stateManager.animator.Play("Idle");
     }
@@ -23,7 +25,7 @@ public class PlayerIdleState : PlayerState
         CheckAttackCombo();
         CheckGunShoot();
 
-        if(stateManager.isGrounded && stateManager.RB.velocity.x != 0)
+        if(stateManager.isGrounded && stateManager.horizontalMove != 0)
         {
             stateManager.SetNextState(states.Running);
         }
