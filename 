@@ -1,0 +1,86 @@
+[33mcommit 725f9cfc67ad3e6f4494fa264710e0ae5ef51367[m[33m ([m[1;36mHEAD -> [m[1;32menemy-anim[m[33m, [m[1;31morigin/enemy-anim[m[33m)[m
+Author: Diogo Gonçalves Mello <diogo.goncalves.mello@gmail.com>
+Date:   Sun Jun 11 00:22:20 2023 -0300
+
+    criando as animacoes do inimigo
+
+[33mcommit 292483508a1daf16c2b5980d782d2f9475660ad7[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: João Lumi <jpedro.lumi@gmail.com>
+Date:   Sat May 20 12:15:03 2023 -0300
+
+    Fix jump bug
+
+[33mcommit 3a3c9eac30c8a93035d00ae5545a9ce0b4e1a6bb[m
+Author: João Lumi <jpedro.lumi@gmail.com>
+Date:   Tue May 16 21:32:02 2023 -0300
+
+    Add powerUps to the level
+    
+    - change level design
+    - add enemy spawn trigger
+
+[33mcommit f55bd7ffdcf8a139d9ba8b1a588a8de42dd30673[m
+Author: João Lumi <jpedro.lumi@gmail.com>
+Date:   Tue May 16 18:39:19 2023 -0300
+
+    Fix powerUps bug
+
+[33mcommit 115c698035597e772fc1ef62cd7e9fb4d4f3629a[m
+Author: jotelles <111712494+jotelles@users.noreply.github.com>
+Date:   Tue May 16 14:55:43 2023 -0300
+
+    Set power up time
+
+[33mcommit fccb904b02b6a4d97447465f58eaa8401b9b48dd[m
+Author: João Lumi <jpedro.lumi@gmail.com>
+Date:   Mon May 15 08:16:03 2023 -0300
+
+    Set doubleShotRate value
+
+[33mcommit 1b5774220cfaa73e6160464e9498b1649c1865dc[m
+Author: João Lumi <jpedro.lumi@gmail.com>
+Date:   Sun May 14 22:51:56 2023 -0300
+
+    Implement double shot power up
+
+[33mcommit 48e5aac962368d4e535275125d865fe04bf359f4[m
+Author: João Lumi <jpedro.lumi@gmail.com>
+Date:   Sun May 14 21:09:37 2023 -0300
+
+    Implement Fire Rate power up
+
+[33mcommit 67812eb3cae3f7d058f30f6ff072bb5bca0ccd0e[m
+Author: João Lumi <jpedro.lumi@gmail.com>
+Date:   Thu May 11 22:29:23 2023 -0300
+
+    Implement Speed and DoubleJump power ups
+
+[33mcommit abd4983a8c2d2a7aa5936ef05f6336466de84212[m
+Author: João Lumi <jpedro.lumi@gmail.com>
+Date:   Thu May 11 22:04:18 2023 -0300
+
+    PowerUps basic structure
+
+[33mcommit d4faa2a2180ba98370ab530fc83beb41c8f2eb4d[m
+Author: João Lumi <jpedro.lumi@gmail.com>
+Date:   Thu May 11 21:16:39 2023 -0300
+
+    Fix player jump
+
+[33mcommit aa58f8b85592a3bc7defbbc9c7604cfea0f16b82[m
+Author: João Lumi <jpedro.lumi@gmail.com>
+Date:   Tue May 9 21:46:52 2023 -0300
+
+    Add project
+
+[33mcommit 5d0de001bb6321c836076fd29faab7c352e830f6[m
+Author: João Lumi <jpedro.lumi@gmail.com>
+Date:   Tue May 9 21:36:20 2023 -0300
+
+    Update gitignore
+
+[33mcommit 7e3395ee663fe6e5faa34a8babe5565659f40fc1[m
+Author: João Pedro Scarmignani Lumi <jpedro.lumi@gmail.com>
+Date:   Tue May 9 21:14:39 2023 -0300
+
+    Initial commit

@@ -17,6 +17,14 @@ public class PlayerStateManager : MonoBehaviour
     [HideInInspector] public Rigidbody2D RB { get; private set; }
     [HideInInspector] public Animator animator { get; private set; }
 
+    [Header("Sounds")]
+    [SerializeField] public AudioClip atack1_sfx;
+    [SerializeField] public AudioClip atack2_sfx;
+    [SerializeField] public AudioClip shot_sfx;
+    [SerializeField] public AudioClip jump_sfx;
+    [SerializeField] public AudioClip landing_sfx;
+    public AudioSource audioSource { get; private set; }
+
     [HideInInspector] public float horizontalMove = 0f;
     [HideInInspector] public bool isGrounded = false;
 
@@ -34,6 +42,7 @@ public class PlayerStateManager : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         swordCollider = gameObject.transform.Find("SwordCollider")
             .GetComponent<Collider2D>();

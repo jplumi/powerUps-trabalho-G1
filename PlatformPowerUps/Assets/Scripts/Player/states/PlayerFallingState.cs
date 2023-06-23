@@ -27,6 +27,7 @@ public class PlayerFallingState : PlayerState
 
         if (stateManager.isGrounded)
         {
+            stateManager.audioSource.PlayOneShot(stateManager.landing_sfx);
             stateManager.SetNextState(states.Idle);
         }
     }
