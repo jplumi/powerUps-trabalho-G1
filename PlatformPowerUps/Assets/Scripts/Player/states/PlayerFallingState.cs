@@ -24,10 +24,10 @@ public class PlayerFallingState : PlayerState
         CheckGunShoot();
 
         stateManager.animator.SetFloat("verticalMove", stateManager.RB.velocity.y);
-        stateManager.landing_sfx.Play();
 
         if (stateManager.isGrounded)
         {
+            stateManager.audioSource.PlayOneShot(stateManager.landing_sfx);
             stateManager.SetNextState(states.Idle);
         }
     }

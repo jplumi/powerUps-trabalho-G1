@@ -16,7 +16,7 @@ public class PlayerJumpingState : PlayerState
     {
         base.EnterState();
 
-        stateManager.jump_sfx.Play();
+        stateManager.audioSource.PlayOneShot(stateManager.jump_sfx);
         stateManager.animator.Play("Jump/Fall");
         stateManager.RB.velocity = new Vector2(stateManager.RB.velocity.x, jumpForce);
     }

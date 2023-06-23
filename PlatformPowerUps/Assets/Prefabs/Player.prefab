@@ -249,8 +249,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: ca506160ed1c5804da546e44b81a2d4b, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -356,6 +356,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   moveSpeed: 10
+  atack1_sfx: {fileID: 8300000, guid: b66094263cd58eb4488b90692366d46b, type: 3}
+  atack2_sfx: {fileID: 8300000, guid: 818228d538083d44996163ef85155368, type: 3}
+  shot_sfx: {fileID: 8300000, guid: 7803da8dda7266546b28754eec3d7717, type: 3}
+  jump_sfx: {fileID: 8300000, guid: 53c09673a6699ae49ae2c0cfc9fd3cdf, type: 3}
+  landing_sfx: {fileID: 8300000, guid: 6328ba70e1ada724d9a4963cb77af6e5, type: 3}
   horizontalMove: 0
   isGrounded: 0
   attackDamageAmount: 20
