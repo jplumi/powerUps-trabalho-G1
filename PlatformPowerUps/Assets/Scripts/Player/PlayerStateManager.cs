@@ -24,6 +24,7 @@ public class PlayerStateManager : MonoBehaviour
     [SerializeField] public AudioClip jump_sfx;
     [SerializeField] public AudioClip landing_sfx;
     [SerializeField] public AudioClip damege_sfx;
+    [SerializeField] public AudioClip death_sfx;
     public AudioSource audioSource { get; private set; }
 
     [HideInInspector] public float horizontalMove = 0f;
