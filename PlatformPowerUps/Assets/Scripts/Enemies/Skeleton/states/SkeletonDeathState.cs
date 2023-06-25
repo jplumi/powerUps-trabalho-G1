@@ -11,6 +11,8 @@ public class SkeletonDeathState : SkeletonState
     {
         base.EnterState();
 
+        stateManager.audioSource.PlayOneShot(stateManager.death_sfx1);
+        stateManager.audioSource.PlayOneShot(stateManager.death_sfx2);
         stateManager.animator.Play("Death");
         Object.Destroy(stateManager.gameObject, 2f);
     }

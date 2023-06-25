@@ -15,6 +15,7 @@ public class PlayerHitState : PlayerState
 
         GameManager.instance.canControlPlayer = false;
         stateManager.animator.Play("Hit");
+        stateManager.audioSource.PlayOneShot(stateManager.damege_sfx);
         GameManager.instance.MakePlayerInvincible();
     }
 

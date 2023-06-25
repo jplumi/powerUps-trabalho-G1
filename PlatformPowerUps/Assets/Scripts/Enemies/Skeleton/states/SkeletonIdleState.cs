@@ -11,6 +11,7 @@ public class SkeletonIdleState : SkeletonState
     {
         base.EnterState();
 
+        stateManager.audioSource.Stop();
         stateManager.animator.Play("Idle");
     }
 
