@@ -12,6 +12,8 @@ public class PlayerGunOutState : PlayerState
         base.EnterState();
 
         GameManager.instance.canControlPlayer = false;
+        stateManager.RB.velocity = Vector2.zero;
+
         stateDuration = 0.3f;
         stateManager.animator.Play("GunOut");
     }
