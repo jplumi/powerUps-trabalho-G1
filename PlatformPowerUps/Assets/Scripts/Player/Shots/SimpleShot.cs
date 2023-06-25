@@ -23,9 +23,9 @@ public class SimpleShot : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            Damageable enemy = collision.gameObject.GetComponent<Damageable>();
 
-            enemy.TakeDamage(_damage);
+            enemy.TakeDamage(_damage, collision);
             Destroy(gameObject);
         } else if(collision.CompareTag("Ground"))
             Destroy(gameObject);
