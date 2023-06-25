@@ -38,6 +38,6 @@ public class PlayerGunInState : PlayerState
 
     bool PlayerIsMoving()
     {
-        return !stateManager.RB.velocity.Equals(Vector2.zero);
+        return stateManager.horizontalMove != 0;
     }
 }

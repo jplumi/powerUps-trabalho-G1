@@ -7,6 +7,8 @@ public class PlayerHitState : PlayerState
     public PlayerHitState(PlayerStateManager playerStateManager, PlayerStateInstances states)
         : base(playerStateManager, states) { }
 
+    float stopKnockbackTime = 0.15f;
+
     public override void EnterState()
     {
         base.EnterState();
@@ -21,6 +23,9 @@ public class PlayerHitState : PlayerState
     public override void UpdateState()
     {
         base.UpdateState();
+
+        if (fixedTime >= stopKnockbackTime)
+            stateManager.RB.velocity = new Vector2(0, stateManager.RB.velocity.y);
 
         if (fixedTime >= stateDuration)
         {
