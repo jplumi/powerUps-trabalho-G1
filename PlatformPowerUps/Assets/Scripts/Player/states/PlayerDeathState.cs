@@ -12,10 +12,14 @@ public class PlayerDeathState : PlayerState
         base.EnterState();
 
         GameManager.instance.playerIsInvincible = true;
+        GameManager.instance.canControlPlayer = false;
+
         stateManager.RB.velocity = Vector2.zero;
 
         stateManager.animator.Play("Death");
         Object.Destroy(stateManager.gameObject, 2f);
+
+        DisableScripts();
     }
 
     public override void UpdateState()
@@ -31,5 +35,11 @@ public class PlayerDeathState : PlayerState
     public override void ExitState()
     {
         base.ExitState();
+    }
+
+    void DisableScripts()
+    {
+        stateManager.GetComponent<Damageable>().enabled = false;
+        stateManager.GetComponent<PlayerStateManager>().enabled = false;
     }
 }
