@@ -12,6 +12,14 @@ public class Skeleton : MonoBehaviour
     [Header("Attack")]
     [SerializeField] int attackDamageAmount;
 
+    [Header("Sounds")]
+    [SerializeField] public AudioClip atack_sfx;
+    [SerializeField] public AudioClip damege_sfx;
+    [SerializeField] public AudioClip death_sfx1;
+    [SerializeField] public AudioClip death_sfx2;
+
+    public AudioSource audioSource { get; private set; }
+
     Collider2D attackCollider;
 
     [HideInInspector] public Rigidbody2D RB;
@@ -25,6 +33,7 @@ public class Skeleton : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         attackCollider = gameObject.transform.Find("AttackCollider")
             .GetComponent<Collider2D>();
 
@@ -54,6 +63,7 @@ public class Skeleton : MonoBehaviour
     // called by attack animation events
     public void Attack()
     {
+        audioSource.PlayOneShot(atack_sfx);
         Collider2D[] result = new Collider2D[1];
 
         ContactFilter2D attackFilter = new ContactFilter2D();

@@ -14,6 +14,7 @@ public class SkeletonDamageState : SkeletonState
         base.EnterState();
 
         stateManager.animator.Play("Damage");
+        stateManager.audioSource.PlayOneShot(stateManager.damege_sfx);
     }
 
     public override void UpdateState()

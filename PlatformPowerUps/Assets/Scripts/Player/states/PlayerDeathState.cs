@@ -17,6 +17,7 @@ public class PlayerDeathState : PlayerState
         stateManager.RB.velocity = Vector2.zero;
 
         stateManager.animator.Play("Death");
+        stateManager.audioSource.PlayOneShot(stateManager.death_sfx);
         Object.Destroy(stateManager.gameObject, 2f);
 
         DisableScripts();

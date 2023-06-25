@@ -11,6 +11,7 @@ public class SkeletonPatrolState : SkeletonState
     {
         base.EnterState();
 
+        stateManager.audioSource.Play();
         stateManager.animator.Play("Walk");
     }
 

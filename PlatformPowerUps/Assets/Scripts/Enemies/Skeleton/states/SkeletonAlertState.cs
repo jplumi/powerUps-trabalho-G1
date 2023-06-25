@@ -19,6 +19,7 @@ public class SkeletonAlertState : SkeletonState
 
         stateManager.animator.Play("Walk");
 
+        stateManager.audioSource.volume *= 1.5f;
         stateManager.movementSpeed *= 1.5f;
 
         player = GameObject.Find("Player")?.transform;
@@ -54,6 +55,7 @@ public class SkeletonAlertState : SkeletonState
         } else
         {
             stateManager.RB.velocity = Vector2.zero;
+            stateManager.audioSource.Stop();
             stateManager.animator.Play("Idle");
         }
     }
