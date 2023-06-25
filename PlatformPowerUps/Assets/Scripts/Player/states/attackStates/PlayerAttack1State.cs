@@ -14,6 +14,7 @@ public class PlayerAttack1State : AttackState
         base.EnterState();
 
         GameManager.instance.canControlPlayer = false;
+        stateManager.RB.velocity = Vector2.zero;
 
         attackDuration = 0.55f;
 

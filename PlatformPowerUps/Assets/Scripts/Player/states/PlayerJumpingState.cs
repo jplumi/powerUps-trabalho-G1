@@ -16,6 +16,11 @@ public class PlayerJumpingState : PlayerState
     {
         base.EnterState();
 
+        // o estado precisa de um tempo limite de duração, pois existem
+        // casos de pulo em que a velocidade y é sempre positiva.
+        // por exemplo: pulando para um lugar muito alto
+        stateDuration = 0.4f;
+
         stateManager.audioSource.PlayOneShot(stateManager.jump_sfx);
         stateManager.animator.Play("Jump/Fall");
         stateManager.RB.velocity = new Vector2(stateManager.RB.velocity.x, jumpForce);
@@ -30,7 +35,10 @@ public class PlayerJumpingState : PlayerState
 
         stateManager.animator.SetFloat("verticalMove", stateManager.RB.velocity.y);
 
-        if (!stateManager.isGrounded && stateManager.RB.velocity.y <= 0)
+        if (
+            (!stateManager.isGrounded && stateManager.RB.velocity.y <= 0) ||
+            fixedTime >= stateDuration
+           )
         {
             stateManager.SetNextState(states.Falling);
         }
