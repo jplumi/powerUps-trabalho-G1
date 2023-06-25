@@ -53,6 +53,7 @@ public class SkeletonAlertState : SkeletonState
             stateManager.RB.velocity = direction * stateManager.movementSpeed;
         } else
         {
+            stateManager.RB.velocity = Vector2.zero;
             stateManager.animator.Play("Idle");
         }
     }
@@ -80,7 +81,7 @@ public class SkeletonAlertState : SkeletonState
     {
         if(stateManager.RB.velocity.x < 0)
             stateManager.transform.eulerAngles = new Vector2(0, 180);
-        else
+        else if(stateManager.RB.velocity.x > 0)
             stateManager.transform.eulerAngles = new Vector2(0, 0);
     }
 
