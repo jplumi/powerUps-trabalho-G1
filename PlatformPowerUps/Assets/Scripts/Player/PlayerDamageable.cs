@@ -16,6 +16,7 @@ public class PlayerDamageable : Damageable
     public override void Heal(int amount)
     {
         base.Heal(amount);
+        hatManager.hat++;
     }
 
     public override void TakeDamage(int amount, Collider2D collider)
@@ -23,6 +24,7 @@ public class PlayerDamageable : Damageable
         if (!GameManager.instance.playerIsInvincible)
         {
             base.TakeDamage(amount, collider);
+            hatManager.hat--;
             Debug.Log("HEALTH " + CurrentHealth);
 
             Direction hitDirection;
