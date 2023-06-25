@@ -12,6 +12,8 @@ public class PlayerDeathState : PlayerState
         base.EnterState();
 
         GameManager.instance.playerIsInvincible = true;
+        stateManager.RB.velocity = Vector2.zero;
+
         stateManager.animator.Play("Death");
         Object.Destroy(stateManager.gameObject, 2f);
     }
