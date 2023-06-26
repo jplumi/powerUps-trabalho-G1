@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 3737313042300849868}
   - component: {fileID: 6167100565196847571}
   - component: {fileID: 8616089776250348407}
+  - component: {fileID: 1438956134}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -384,6 +385,26 @@ MonoBehaviour:
   _currentHealth: 100
   _maxHealth: 100
   knockbackForce: 10
+--- !u!114 &1438956134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6606489113857016474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a250dcfc3ed55e548aa5ae67421b64f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hats:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullHat: {fileID: 21300000, guid: 603ac5ffd31a0214c8c7d336bf1b81b8, type: 3}
+  emptyHat: {fileID: 21300000, guid: 8ad5d998de74bd243a4c96aa76aff943, type: 3}
 --- !u!1 &6606489115241751107
 GameObject:
   m_ObjectHideFlags: 0
