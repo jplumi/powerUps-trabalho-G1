@@ -18,7 +18,7 @@ public class Skeleton : MonoBehaviour
     [HideInInspector] public Animator animator;
 
     SkeletonState currentState;
-    SkeletonStateInstances instances;
+    public SkeletonStateInstances instances { get; private set; }
 
 
     void Start()
@@ -60,8 +60,6 @@ public class Skeleton : MonoBehaviour
         attackFilter.SetLayerMask(playerLayer);
 
         attackCollider.OverlapCollider(attackFilter, result);
-
-        Debug.Log(result[0]);
 
         if (result[0] != null && result[0].TryGetComponent<Damageable>(out Damageable damageable))
         {

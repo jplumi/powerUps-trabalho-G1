@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class SkeletonDamageState : SkeletonState
 {
+    float stateDuration = 0.5f;
+
     public SkeletonDamageState(Skeleton manager, SkeletonStateInstances states)
         : base(manager, states) { }
 
     public override void EnterState()
     {
         base.EnterState();
+
+        stateManager.animator.Play("Damage");
     }
 
     public override void UpdateState()
     {
         base.UpdateState();
+
+        if(fixedTime >= stateDuration)
+        {
+            stateManager.SetNextState(states.Alert);
+        }
     }
 
     public override void FixedUpdateState()

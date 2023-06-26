@@ -9,8 +9,11 @@ public class PlayerShootState : PlayerState
 
     public override void EnterState()
     {
+        base.EnterState();
+
         stateDuration = 0.4f;
         stateManager.animator.Play("GunShoot");
+        stateManager.audioSource.PlayOneShot(stateManager.shot_sfx);
         InstantiateShot();
     }
 

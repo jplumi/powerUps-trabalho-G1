@@ -14,6 +14,8 @@ public class PlayerStateInstances
     public PlayerGunOutState GunOut { get; private set; }
     public PlayerShootState Shoot { get; private set; }
     public PlayerGunInState GunIn { get; private set; }
+    public PlayerHitState Hit { get; private set; }
+    public PlayerDeathState Death { get; private set; }
 
     public PlayerStateInstances(PlayerStateManager stateManager)
     {
@@ -27,5 +29,7 @@ public class PlayerStateInstances
         GunOut = new PlayerGunOutState(stateManager, this);
         Shoot = new PlayerShootState(stateManager, this);
         GunIn = new PlayerGunInState(stateManager, this);
+        Hit = new PlayerHitState(stateManager, this);
+        Death = new PlayerDeathState(stateManager, this);
     }
 }

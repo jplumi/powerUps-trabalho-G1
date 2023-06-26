@@ -15,6 +15,11 @@ public abstract class PlayerState : State
         this.states = states;
     }
 
+    public override void EnterState()
+    {
+        base.EnterState();
+    }
+
     // call this method in any state the player should jump
     protected void CheckJump()
     {

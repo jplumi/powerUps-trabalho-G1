@@ -8,6 +8,8 @@ public class SkeletonAlertState : SkeletonState
 
     bool attackRange = false;
 
+    float alertStateDuration = 5f;
+
     public SkeletonAlertState(Skeleton manager, SkeletonStateInstances states)
          : base(manager, states) { }
 
@@ -19,7 +21,7 @@ public class SkeletonAlertState : SkeletonState
 
         stateManager.movementSpeed *= 1.5f;
 
-        player = GameObject.Find("Player").transform;
+        player = GameObject.Find("Player")?.transform;
     }
 
     public override void UpdateState()
@@ -30,6 +32,11 @@ public class SkeletonAlertState : SkeletonState
         {
             stateManager.SetNextState(states.Attack);
         }
+
+        if(fixedTime >= alertStateDuration)
+        {
+            stateManager.SetNextState(states.Patrol);
+        }
     }
 
     public override void FixedUpdateState()
@@ -38,9 +45,16 @@ public class SkeletonAlertState : SkeletonState
 
 
         GetPlayerDirection();
-        CheckDirection();
+        CheckFacingDirection();
         CheckAttackRange();
-        stateManager.RB.velocity = direction * stateManager.movementSpeed;
+
+        if (!stepHit)
+        {
+            stateManager.RB.velocity = direction * stateManager.movementSpeed;
+        } else
+        {
+            stateManager.animator.Play("Idle");
+        }
     }
 
     public override void ExitState()
@@ -52,14 +66,17 @@ public class SkeletonAlertState : SkeletonState
 
     void GetPlayerDirection()
     {
-        float enemyXPosition = stateManager.gameObject.transform.position.x;
-        if(player.position.x < enemyXPosition)
-            direction = Vector2.left;
-        else
-            direction = Vector2.right;
+        if(player != null)
+        {
+            float enemyXPosition = stateManager.gameObject.transform.position.x;
+            if(player.position.x < enemyXPosition)
+                direction = Vector2.left;
+            else
+                direction = Vector2.right;
+        }
     }
 
-    void CheckDirection()
+    void CheckFacingDirection()
     {
         if(stateManager.RB.velocity.x < 0)
             stateManager.transform.eulerAngles = new Vector2(0, 180);

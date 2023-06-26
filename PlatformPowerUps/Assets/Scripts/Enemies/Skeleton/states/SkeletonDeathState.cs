@@ -10,6 +10,9 @@ public class SkeletonDeathState : SkeletonState
     public override void EnterState()
     {
         base.EnterState();
+
+        stateManager.animator.Play("Death");
+        Object.Destroy(stateManager.gameObject, 2f);
     }
 
     public override void UpdateState()

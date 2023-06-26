@@ -5,12 +5,10 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] public float speed = 0f;
     [SerializeField] private LayerMask _groundLayer;
-    [SerializeField] private int _health = 0;
+    //[SerializeField] private int _health = 0;
     [SerializeField] private GameObject _dropableItem;
 
     public int damage = 0;
-
-    private Health _enemyHealth;
 
     private Rigidbody2D RB;
 
@@ -21,8 +19,6 @@ public class Enemy : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         _vectorDirection = Vector2.left;
-
-        _enemyHealth = new Health(_health, _health);
     }
 
     void FixedUpdate()
@@ -81,12 +77,12 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        _enemyHealth.TakeDamage(amount);
-        if(_enemyHealth.currentHealth == 0)
-        {
-            Die();
-        }
-        Debug.Log("Enemy Health: " + _enemyHealth.currentHealth);
+        //_enemyHealth.TakeDamage(amount);
+        //if(_enemyHealth.currentHealth == 0)
+        //{
+        //    Die();
+        //}
+        //Debug.Log("Enemy Health: " + _enemyHealth.currentHealth);
     }
 
     private void Die()
