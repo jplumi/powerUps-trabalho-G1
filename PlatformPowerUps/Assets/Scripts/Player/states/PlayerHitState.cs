@@ -16,9 +16,9 @@ public class PlayerHitState : PlayerState
         stateDuration = 0.7f;
 
         GameManager.instance.canControlPlayer = false;
+        GameManager.instance.MakePlayerInvincible();
         stateManager.animator.Play("Hit");
         stateManager.audioSource.PlayOneShot(stateManager.damege_sfx);
-        GameManager.instance.MakePlayerInvincible();
     }
 
     public override void UpdateState()

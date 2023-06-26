@@ -734,11 +734,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6606489113857017188, guid: ad48551adf0b046149479414f42f0c3e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.97
+      value: 49.6
       objectReference: {fileID: 0}
     - target: {fileID: 6606489113857017188, guid: ad48551adf0b046149479414f42f0c3e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.31
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6606489113857017188, guid: ad48551adf0b046149479414f42f0c3e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1131,7 +1131,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.43244505, y: 2.08, z: -10}
+  m_LocalPosition: {x: 51.556084, y: 3.2700002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1566,7 +1566,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778178631}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.7496614, y: 0.00000023841858, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13016,7 +13016,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fe8c6f149d011514eac0203a2d8a477e, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.128
   m_Pitch: 1
   Loop: 1
@@ -13435,17 +13435,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4586336931620498915, guid: df15c8b158ead40a7bed284aba962533, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9116747476284397945, guid: df15c8b158ead40a7bed284aba962533, type: 3}
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9116747476284397945, guid: df15c8b158ead40a7bed284aba962533, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.9
+      value: 56.9
       objectReference: {fileID: 0}
     - target: {fileID: 9116747476284397945, guid: df15c8b158ead40a7bed284aba962533, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.4
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 9116747476284397945, guid: df15c8b158ead40a7bed284aba962533, type: 3}
       propertyPath: m_LocalPosition.z

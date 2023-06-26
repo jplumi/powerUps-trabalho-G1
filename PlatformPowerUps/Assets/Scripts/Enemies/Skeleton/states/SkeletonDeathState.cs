@@ -15,6 +15,8 @@ public class SkeletonDeathState : SkeletonState
         stateManager.audioSource.PlayOneShot(stateManager.death_sfx2);
         stateManager.animator.Play("Death");
         Object.Destroy(stateManager.gameObject, 2f);
+
+        DisableScripts();
     }
 
     public override void UpdateState()
@@ -30,5 +32,11 @@ public class SkeletonDeathState : SkeletonState
     public override void ExitState()
     {
         base.ExitState();
+    }
+
+    void DisableScripts()
+    {
+        stateManager.GetComponent<Skeleton>().enabled = false;
+        stateManager.GetComponent<Damageable>().enabled = false;
     }
 }

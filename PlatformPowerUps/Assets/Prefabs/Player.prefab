@@ -184,7 +184,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &301858858592860311
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -201,7 +201,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!70 &3054417584024782218
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -361,6 +362,8 @@ MonoBehaviour:
   shot_sfx: {fileID: 8300000, guid: 7803da8dda7266546b28754eec3d7717, type: 3}
   jump_sfx: {fileID: 8300000, guid: 53c09673a6699ae49ae2c0cfc9fd3cdf, type: 3}
   landing_sfx: {fileID: 8300000, guid: 6328ba70e1ada724d9a4963cb77af6e5, type: 3}
+  damege_sfx: {fileID: 8300000, guid: 53cb19e11984cf64db3b16957aa5f54c, type: 3}
+  death_sfx: {fileID: 8300000, guid: bdec98b2685bf2a4b8fcb42561d15e49, type: 3}
   horizontalMove: 0
   isGrounded: 0
   attackDamageAmount: 20

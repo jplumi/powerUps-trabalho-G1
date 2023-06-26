@@ -23,8 +23,7 @@ public class SkeletonState : State
     public override void EnterState()
     {
         base.EnterState();
-
-        //Debug.Log("ENTER " + this.GetType());
+        stateManager.audioSource.Stop();
     }
 
     public override void UpdateState()

@@ -63,7 +63,6 @@ public class Skeleton : MonoBehaviour
     // called by attack animation events
     public void Attack()
     {
-        audioSource.PlayOneShot(atack_sfx);
         Collider2D[] result = new Collider2D[1];
 
         ContactFilter2D attackFilter = new ContactFilter2D();
@@ -75,5 +74,10 @@ public class Skeleton : MonoBehaviour
         {
             damageable.TakeDamage(attackDamageAmount, attackCollider);
         }
+    }
+
+    public void PlayAttackSound()
+    {
+        audioSource.PlayOneShot(atack_sfx);
     }
 }

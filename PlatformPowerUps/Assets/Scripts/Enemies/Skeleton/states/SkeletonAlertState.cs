@@ -18,6 +18,7 @@ public class SkeletonAlertState : SkeletonState
         base.EnterState();
 
         stateManager.animator.Play("Walk");
+        stateManager.audioSource.Play();
 
         stateManager.audioSource.volume *= 1.5f;
         stateManager.movementSpeed *= 1.5f;
