@@ -38,6 +38,8 @@ public class PlayerStateManager : MonoBehaviour
     [Header("Shot")]
     public GameObject shotPrefab;
     public Transform shotSpawnPoint;
+    [HideInInspector] public bool canDoubleShot = false;
+    [HideInInspector] public bool secondShotMade = false;
 
     // unity lifecycle
     void Start()
