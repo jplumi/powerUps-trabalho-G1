@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class EpicBossEmerge : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] float jumpForce;
+
+    public void Trigger()
     {
-        
+        Rigidbody2D RB = GetComponent<Rigidbody2D>();
+        RB.isKinematic = false;
+        RB.velocity = Vector2.up * jumpForce;
+        StartCoroutine("EnableScripts");
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator EnableScripts()
     {
-        
+        yield return new WaitForSeconds(0.5f);
+        GetComponent<CapsuleCollider2D>().enabled = true;
+        GetComponent<Skeleton>().enabled = true;
+        GetComponent<SkeletonDamageable>().enabled = true;
+        GetComponent<AudioSource>().enabled = true;
     }
 }

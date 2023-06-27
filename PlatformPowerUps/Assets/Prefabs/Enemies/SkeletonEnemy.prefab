@@ -226,6 +226,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   movementSpeed: 3
+  wallCheckerDistance: 1
+  stepCheckerDistance: 1.4
+  playerCheckerDistance: 6
+  attackDistance: 2.5
   attackDamageAmount: 20
   atack_sfx: {fileID: 8300000, guid: 669d8463af0e13949a2c47d063f8b0b2, type: 3}
   damege_sfx: {fileID: 8300000, guid: e7dd96533b9f5804a8566f2d991f10d5, type: 3}

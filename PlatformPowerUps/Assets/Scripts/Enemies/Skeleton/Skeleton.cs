@@ -8,6 +8,10 @@ public class Skeleton : MonoBehaviour
     public LayerMask groundLayer;
     public LayerMask playerLayer;
     public float movementSpeed;
+    public float wallCheckerDistance;
+    public float stepCheckerDistance;
+    public float playerCheckerDistance;
+    public float attackDistance;
 
     [Header("Attack")]
     [SerializeField] int attackDamageAmount;

@@ -48,37 +48,37 @@ public class SkeletonState : State
     void CheckWall()
     {
         Vector2 origin = stateManager.gameObject.transform.position;
-        float raycastDistance = 1f;
+        //float raycastDistance = 1f;
         wallHit = Physics2D.Raycast(
             origin,
             direction,
-            raycastDistance,
+            stateManager.wallCheckerDistance,
             stateManager.groundLayer);
 
-        Debug.DrawRay(origin, direction * raycastDistance, Color.blue);
+        Debug.DrawRay(origin, direction * stateManager.wallCheckerDistance, Color.blue);
     }
 
     void CheckStep()
     {
-        float raycastDistance = 1.4f;
+        //float raycastDistance = 1.4f;
         Vector2 raycastOrigin = (Vector2) stateManager.transform.position + direction * 0.7f;
 
-        stepHit = !Physics2D.Raycast(raycastOrigin, Vector2.down, raycastDistance, stateManager.groundLayer);
+        stepHit = !Physics2D.Raycast(raycastOrigin, Vector2.down, stateManager.stepCheckerDistance, stateManager.groundLayer);
 
-        Debug.DrawRay(raycastOrigin, Vector2.down * raycastDistance, Color.red);
+        Debug.DrawRay(raycastOrigin, Vector2.down * stateManager.stepCheckerDistance, Color.red);
     }
 
     void CheckPlayer()
     {
         Vector2 origin = stateManager.gameObject.transform.position;
-        float raycastDistance = 6f;
+        //float raycastDistance = 6f;
         playerDetected = Physics2D.Raycast(
             origin,
             direction,
-            raycastDistance,
+            stateManager.playerCheckerDistance,
             stateManager.playerLayer);
 
-        Debug.DrawRay(origin, direction * raycastDistance, Color.green);
+        Debug.DrawRay(origin, direction * stateManager.playerCheckerDistance, Color.green);
     }
 
     protected void Flip()
