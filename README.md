@@ -7,9 +7,9 @@ Este projeto é a base de estudos para o trabalho G2 este sendo a emulação de 
 Nosso projeto consiste na criação do jogo Pirata e a Ilha (Nome ainda temporario), o qual você o capitão do navio Tuorial 
 ## Autores
 
-- [@](https://www.github.com/)
-- [@](https://www.github.com/)
-- [@](https://www.github.com/)
+- [@jotelles](https://www.github.com/jotelles)
+- [@Diogog09](https://www.github.com/Diogog09)
+- [@jplumi](https://www.github.com/jplumi)
 - [@SoraNoctis](https://www.github.com/SoraNoctis)
 ## Roadmap
 
