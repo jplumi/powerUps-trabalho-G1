@@ -8,15 +8,15 @@ public class DoubleShotPowerUp : PowerUp
 
     public override void AddPowerUp(Collider2D playerCollision)
     {
-        PlayerShoot playerShoot = playerCollision.GetComponent<PlayerShoot>();
-        playerShoot.doubleShot = true;
+        PlayerStateManager playerShoot = playerCollision.GetComponent<PlayerStateManager>();
+        playerShoot.canDoubleShot = true;
 
         this.playerCollision = playerCollision;
     }
 
     public override void RemovePowerUp()
     {
-        PlayerShoot playerShoot = playerCollision.GetComponent<PlayerShoot>();
-        playerShoot.doubleShot = false;
+        //PlayerShoot playerShoot = playerCollision.GetComponent<PlayerShoot>();
+        //playerShoot.doubleShot = false;
     }
 }

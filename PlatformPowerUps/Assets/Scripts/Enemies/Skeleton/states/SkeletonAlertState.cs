@@ -91,13 +91,13 @@ public class SkeletonAlertState : SkeletonState
     void CheckAttackRange()
     {
         Vector2 origin = stateManager.gameObject.transform.position + new Vector3(0, 0.5f);
-        float raycastDistance = 2.5f;
+        //float raycastDistance = 2.5f;
         attackRange = Physics2D.Raycast(
             origin,
             direction,
-            raycastDistance,
+            stateManager.attackDistance,
             stateManager.playerLayer);
 
-        Debug.DrawRay(origin, direction * raycastDistance, Color.yellow);
+        Debug.DrawRay(origin, direction * stateManager.attackDistance, Color.yellow);
     }
 }

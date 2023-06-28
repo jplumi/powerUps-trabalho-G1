@@ -7,6 +7,8 @@ public class PlayerShootState : PlayerState
     public PlayerShootState(PlayerStateManager playerStateManager, PlayerStateInstances states)
         : base(playerStateManager, states) { }
 
+    bool secondShot = false;
+
     public override void EnterState()
     {
         base.EnterState();
@@ -21,9 +23,17 @@ public class PlayerShootState : PlayerState
     {
         base.UpdateState();
 
+        CheckSecondShot();
+
         if (fixedTime >= stateDuration)
         {
-            stateManager.SetNextState(states.GunIn);
+            if (!stateManager.secondShotMade && secondShot)
+            {
+                secondShot = false;
+                stateManager.secondShotMade = true;
+                stateManager.SetNextState(states.Shoot);
+            } else
+                stateManager.SetNextState(states.GunIn);
         }
     }
 
@@ -43,5 +53,13 @@ public class PlayerShootState : PlayerState
             stateManager.shotPrefab,
             stateManager.shotSpawnPoint.transform.position,
             stateManager.shotSpawnPoint.rotation);
+    }
+
+    void CheckSecondShot()
+    {
+        if(stateManager.canDoubleShot && Input.GetMouseButtonDown(1))
+        {
+            secondShot = true;
+        }
     }
 }

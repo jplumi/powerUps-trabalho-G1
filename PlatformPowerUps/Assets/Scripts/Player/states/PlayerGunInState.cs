@@ -14,6 +14,8 @@ public class PlayerGunInState : PlayerState
         GameManager.instance.canControlPlayer = true;
         stateDuration = 0.3f;
         stateManager.animator.Play("GunIn");
+
+        stateManager.secondShotMade = false;
     }
 
     public override void UpdateState()

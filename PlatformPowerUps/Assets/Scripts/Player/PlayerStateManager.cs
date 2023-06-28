@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStateManager : MonoBehaviour
 {
@@ -38,6 +39,8 @@ public class PlayerStateManager : MonoBehaviour
     [Header("Shot")]
     public GameObject shotPrefab;
     public Transform shotSpawnPoint;
+    [HideInInspector] public bool canDoubleShot = false;
+    [HideInInspector] public bool secondShotMade = false;
 
     // unity lifecycle
     void Start()
@@ -52,6 +55,7 @@ public class PlayerStateManager : MonoBehaviour
         stateInstances = new PlayerStateInstances(this);
 
         _currentState = stateInstances.Idle;
+        _currentState.EnterState();
     }
 
     void Update()
@@ -119,6 +123,12 @@ public class PlayerStateManager : MonoBehaviour
                 damageable.TakeDamage(attackDamageAmount, swordCollider);
             }
         }
+    }
+
+    void OnDestroy()
+    {
+        Debug.Log("destroy");
+        SceneManager.LoadScene("Level01");
     }
 
     private void OnDrawGizmos()

@@ -31,7 +31,7 @@ public abstract class PlayerState : State
 
     protected void CheckAttackCombo()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetMouseButtonDown(0))
         {
             stateManager.SetNextState(states.Attack1);
         }
@@ -39,7 +39,7 @@ public abstract class PlayerState : State
 
     protected void CheckGunShoot()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetMouseButtonDown(1))
         {
             stateManager.SetNextState(states.GunOut);
         }
