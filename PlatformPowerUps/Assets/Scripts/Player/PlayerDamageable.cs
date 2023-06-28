@@ -25,7 +25,6 @@ public class PlayerDamageable : Damageable
         {
             base.TakeDamage(amount, collider);
             hatManager.hat--;
-            Debug.Log("HEALTH " + CurrentHealth);
 
             Direction hitDirection;
 

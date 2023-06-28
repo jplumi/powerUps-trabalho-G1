@@ -57,7 +57,7 @@ public class PlayerShootState : PlayerState
 
     void CheckSecondShot()
     {
-        if(stateManager.canDoubleShot && Input.GetKeyDown(KeyCode.K))
+        if(stateManager.canDoubleShot && Input.GetMouseButtonDown(1))
         {
             secondShot = true;
         }

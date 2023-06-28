@@ -15,7 +15,7 @@ public abstract class AttackState : PlayerState
     {
         base.UpdateState();
 
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetMouseButtonDown(0))
         {
             shouldCombo = true;
         }
